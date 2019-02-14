@@ -24,7 +24,5 @@ public class android_bug_tracker extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
         onBackPressed();
-
-        // boom
     }
 }
