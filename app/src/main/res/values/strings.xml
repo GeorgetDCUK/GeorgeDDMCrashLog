@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DDM Crash Log</string>
+    <string name="welcome_to_the_ddm_crash_log_please_press_continue_to_go_to_sign_in">Welcome to the DDM Crash Log, please press \'Continue\' to go to sign in</string>
+    <string name="welcome_to_the_crash_log_for_ddm_s_applications_on_ios_and_android_for_lcp_hypo_and_soon_gro">Welcome to the Crash Log for DDM\'s applications on iOS and Android for LCP , Hypo and soon Gro</string>
+    <string name="lets_get_started">Lets Get Started…</string>
+    <string name="which_platform_are_we_adding_records_to_today">Which platform are we adding records to today?</string>
+    <string name="_5"><![CDATA[<5]]></string>
+    <string name="_20"><![CDATA[>20]]></string>
+    <string name="_10_20">10-20</string>
+    <string name="_5_10">5-10</string>
+    <string name="where_did_the_crash_occur">Where did the crash occur?</string>
+</resources>
