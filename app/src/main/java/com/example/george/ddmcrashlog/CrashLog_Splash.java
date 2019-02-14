@@ -16,5 +16,6 @@ public class CrashLog_Splash extends AppCompatActivity {
     public void splashButtonClick(View view) {
         Intent intent = new Intent(this, CrashLog_LogIn.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
 }

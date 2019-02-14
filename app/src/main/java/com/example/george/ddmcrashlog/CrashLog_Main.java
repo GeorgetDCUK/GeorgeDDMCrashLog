@@ -16,5 +16,6 @@ public class CrashLog_Main extends AppCompatActivity {
     public void StartAndroidBugTracker(View view) {
         Intent intent = new Intent(this, android_bug_tracker.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
 }

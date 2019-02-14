@@ -16,11 +16,13 @@ public class CrashLog_LogIn extends AppCompatActivity {
    public void SignInClick(View view) {
         Intent intent = new Intent(this, CrashLog_Main.class);
         startActivity(intent);
+       overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
 
     // Back arrow functionality
     public void BackArrow(View view) {
         Intent intent = new Intent(this, CrashLog_Splash.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
 }

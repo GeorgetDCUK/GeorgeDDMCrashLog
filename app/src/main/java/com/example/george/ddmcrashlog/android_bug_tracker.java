@@ -16,10 +16,13 @@ public class android_bug_tracker extends AppCompatActivity {
     public void AndroidScreen2(View view) {
         Intent intent = new Intent(this, android_bug_tracker2.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
     // Go back to Main Screen
     public void BackArrowToMain(View view) {
         Intent intent = new Intent(this, CrashLog_Main.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        onBackPressed();
     }
 }

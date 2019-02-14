@@ -17,5 +17,7 @@ public class android_bug_tracker2 extends AppCompatActivity {
     public void BackArrowToAndroid1(View view) {
         Intent intent = new Intent(this, android_bug_tracker.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        onBackPressed();
     }
 }
