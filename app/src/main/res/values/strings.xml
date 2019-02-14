@@ -9,4 +9,12 @@
     <string name="_10_20">10-20</string>
     <string name="_5_10">5-10</string>
     <string name="where_did_the_crash_occur">Where did the crash occur?</string>
+    <string name="device_hint">Choose a device</string>
+    <string-array name="devices_array">
+        <item>Samsung S9</item>
+        <item>Samsung S8</item>
+        <item>Samsung S7</item>
+        <item>Samsung S6</item>
+        <item>Samsung S5</item>
+    </string-array>
 </resources>
