@@ -16,7 +16,7 @@ public class CrashLog_LogIn extends AppCompatActivity {
    public void SignInClick(View view) {
         Intent intent = new Intent(this, CrashLog_Main.class);
         startActivity(intent);
-       overridePendingTransition(R.anim.right_in, R.anim.right_out);
+        overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
 
     // Back arrow functionality

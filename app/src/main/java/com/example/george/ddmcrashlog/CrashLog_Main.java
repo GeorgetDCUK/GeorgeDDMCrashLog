@@ -13,6 +13,7 @@ public class CrashLog_Main extends AppCompatActivity {
         setContentView(R.layout.activity_crash_log_main);
     }
 
+    // Start Android Bug tracker activity - Start to track bugs and connect to sql local to store in db
     public void StartAndroidBugTracker(View view) {
         Intent intent = new Intent(this, android_bug_tracker.class);
         startActivity(intent);
