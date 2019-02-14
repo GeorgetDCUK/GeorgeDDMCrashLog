@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/top_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" android:onClick="BackArrowToAndroid1" android:scaleType="fitStart" android:tint="@color/colorActionBar" android:tintMode="add" app:srcCompat="@drawable/blackarrow" />
+
+        <ImageButton android:id="@+id/sign_out" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitEnd" android:tint="@color/colorActionBar" android:tintMode="add" app:srcCompat="@drawable/signout" />
+    </LinearLayout>
+</selector>
