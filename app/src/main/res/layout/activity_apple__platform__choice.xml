@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Apple_Platform_Choice">
+
+    <LinearLayout
+        android:id="@+id/gro_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/background_1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/gro_logo"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/grologo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hypo_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/hypo_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/gro_linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/hypo_logo"
+            android:layout_width="184dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/hypologo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lcp_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/lcp_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/hypo_linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/lcp_logo"
+            android:layout_width="231dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/lcplogo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ddm_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="124dp"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ddmlogo2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:tint="@color/colorActionBar"
+            android:tintMode="add"
+            app:srcCompat="@drawable/blackarrow" />
+
+        <ImageButton
+            android:id="@+id/sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitEnd"
+            android:tint="@color/colorActionBar"
+            android:tintMode="add"
+            app:srcCompat="@drawable/signout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/android_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:paddingStart="80sp"
+            android:text="Let's Track Apple"
+            android:textAlignment="center"
+            android:textColor="@color/colorActionBar"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/android_image"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/apple" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

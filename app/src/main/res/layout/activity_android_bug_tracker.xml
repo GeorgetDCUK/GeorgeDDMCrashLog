@@ -260,7 +260,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/Android_Linear"
+        android:id="@+id/hypo_linear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -341,7 +341,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Android_Linear">
+        app:layout_constraintTop_toBottomOf="@+id/hypo_linear">
 
         <TextView
             android:id="@+id/crash_num"

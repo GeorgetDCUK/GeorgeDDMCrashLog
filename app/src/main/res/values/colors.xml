@@ -5,4 +5,5 @@
     <color name="colorAccent">#ffffff</color>
     <color name="colorActionBar">#0078f8</color>
     <color name="colorMedium">#54a0f1</color>
+    <color name="colorHypo">#d7402f</color>
 </resources>

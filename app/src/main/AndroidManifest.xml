@@ -19,7 +19,9 @@
         <activity android:name=".CrashLog_LogIn" />
         <activity android:name=".CrashLog_Main" />
         <activity android:name=".android_bug_tracker" />
-        <activity android:name=".android_bug_tracker2"></activity>
+        <activity android:name=".android_bug_tracker2" />
+        <activity android:name=".Android_Platform_Choice" />
+        <activity android:name=".Apple_Platform_Choice"></activity>
     </application>
 
 </manifest>
