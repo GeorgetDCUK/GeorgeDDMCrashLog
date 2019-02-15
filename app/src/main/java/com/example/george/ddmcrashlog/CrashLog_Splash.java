@@ -10,7 +10,7 @@ public class CrashLog_Splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crash_log__splash);
+        setContentView(R.layout.activity_crash_log_splash);
     }
 
     public void splashButtonClick(View view) {

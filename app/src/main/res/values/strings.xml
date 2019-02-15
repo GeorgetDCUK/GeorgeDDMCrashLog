@@ -17,4 +17,16 @@
         <item>Samsung S6</item>
         <item>Samsung S5</item>
     </string-array>
+    <string name="app_version_hint">Choose a app version</string>
+    <string-array name="appversion_array">
+        <item>Latest</item>
+    </string-array>
+    <string-array name="appledevices_array">
+        <item>iPhone XS</item>
+        <item>iPhone XS MAX</item>
+        <item>iPhone XR</item>
+        <item>iPhone X</item>
+        <item>iPhone 8</item>
+        <item>iPhone 8 Plus</item>
+    </string-array>
 </resources>

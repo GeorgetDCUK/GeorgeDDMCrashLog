@@ -4,29 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Apple_Platform_Choice">
+    android:background="@color/colorPrimary"
+    tools:context=".Android_Platform_Choice">
 
     <LinearLayout
-        android:id="@+id/gro_linear"
+        android:id="@+id/top_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="BackToMain"
+            android:scaleType="fitStart"
+            android:tint="@color/colorActionBar"
+            app:srcCompat="@drawable/backarrow" />
+
+        <ImageButton
+            android:id="@+id/sign_out"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="LogOut"
+            android:scaleType="fitEnd"
+            android:tint="@color/colorActionBar"
+            app:srcCompat="@drawable/exitapp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lcp_linear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="120dp"
-        android:background="@drawable/background_1"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/lcp_background"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/hypo_linear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/gro_logo"
-            android:layout_width="320dp"
+        <ImageButton
+            android:id="@+id/lcp_logo"
+            android:layout_width="231dp"
             android:layout_height="80dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/grologo" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="StartAndroidBugTracker"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lcplogo" />
 
     </LinearLayout>
 
@@ -45,36 +90,47 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/hypo_logo"
             android:layout_width="184dp"
             android:layout_height="80dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="StartAndroidBugTracker"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/hypologo" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lcp_linear"
+        android:id="@+id/gro_linear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/lcp_background"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/background_1"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/hypo_linear"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/lcp_logo"
-            android:layout_width="231dp"
+        <ImageButton
+            android:id="@+id/gro_logo"
+            android:layout_width="320dp"
             android:layout_height="80dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/lcplogo" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="StartAndroidBugTracker"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/grologo" />
 
     </LinearLayout>
 
@@ -101,43 +157,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/top_nav"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_weight="0"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitStart"
-            android:tint="@color/colorActionBar"
-            android:tintMode="add"
-            app:srcCompat="@drawable/blackarrow" />
-
-        <ImageButton
-            android:id="@+id/sign_out"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitEnd"
-            android:tint="@color/colorActionBar"
-            android:tintMode="add"
-            app:srcCompat="@drawable/signout" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/android_linear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -155,8 +174,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="0"
-            android:paddingStart="80sp"
-            android:text="Let's Track Apple"
+            android:paddingStart="65dp"
+            android:text="Let's Track Android"
             android:textAlignment="center"
             android:textColor="@color/colorActionBar"
             android:textSize="18sp"
@@ -167,7 +186,7 @@
             android:layout_width="63dp"
             android:layout_height="80dp"
             android:layout_weight="0"
-            app:srcCompat="@drawable/apple" />
+            app:srcCompat="@drawable/androidlogo" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

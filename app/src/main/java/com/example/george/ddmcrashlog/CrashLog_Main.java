@@ -13,10 +13,22 @@ public class CrashLog_Main extends AppCompatActivity {
         setContentView(R.layout.activity_crash_log_main);
     }
 
-    // Start Android Bug tracker activity - Start to track bugs and connect to sql local to store in db
-    public void StartAndroidBugTracker(View view) {
-        Intent intent = new Intent(this, android_bug_tracker.class);
+    // Start Android Platform chooser - Start to track bugs and connect to sql local to store in db
+    public void StartAndroidPlatformChooser(View view) {
+        Intent intent = new Intent(this, Android_Platform_Choice.class);
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
+    }
+
+    public void StartApplePlatformChooser(View view) {
+        Intent intent = new Intent(this, Apple_Platform_Choice.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.right_in, R.anim.right_out);
+    }
+
+    public void LogOut(View view) {
+        Intent intent = new Intent(this, CrashLog_LogIn.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
 }

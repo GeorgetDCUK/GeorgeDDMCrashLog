@@ -4,7 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Android_Platform_Choice">
+    android:background="@color/colorPrimary"
+    tools:context=".Apple_Platform_Choice">
+
+    <LinearLayout
+        android:id="@+id/top_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="BackToMain"
+            android:scaleType="fitStart"
+            android:tint="@color/colorActionBar"
+            app:srcCompat="@drawable/backarrow" />
+
+        <ImageButton
+            android:id="@+id/sign_out"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="LogOut"
+            android:scaleType="fitEnd"
+            android:tint="@color/colorActionBar"
+            app:srcCompat="@drawable/exitapp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lcp_linear"
@@ -21,12 +60,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/lcp_logo"
             android:layout_width="231dp"
             android:layout_height="80dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/lcplogo" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="StartAppleBugTracker"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lcplogo" />
 
     </LinearLayout>
 
@@ -45,11 +90,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/hypo_logo"
             android:layout_width="184dp"
             android:layout_height="80dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="StartAppleBugTracker"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/hypologo" />
 
     </LinearLayout>
@@ -69,11 +120,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/gro_logo"
             android:layout_width="320dp"
             android:layout_height="80dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@android:color/transparent"
+            android:onClick="StartAppleBugTracker"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/grologo" />
 
     </LinearLayout>
@@ -101,43 +157,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/top_nav"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_weight="0"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitStart"
-            android:tint="@color/colorActionBar"
-            android:tintMode="add"
-            app:srcCompat="@drawable/blackarrow" />
-
-        <ImageButton
-            android:id="@+id/sign_out"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitEnd"
-            android:tint="@color/colorActionBar"
-            android:tintMode="add"
-            app:srcCompat="@drawable/signout" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/android_linear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -156,7 +175,7 @@
             android:layout_gravity="center"
             android:layout_weight="0"
             android:paddingStart="65dp"
-            android:text="Let's Track Android"
+            android:text="Let's Track Apple"
             android:textAlignment="center"
             android:textColor="@color/colorActionBar"
             android:textSize="18sp"
@@ -167,7 +186,7 @@
             android:layout_width="63dp"
             android:layout_height="80dp"
             android:layout_weight="0"
-            app:srcCompat="@drawable/androidlogo" />
+            app:srcCompat="@drawable/apple" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

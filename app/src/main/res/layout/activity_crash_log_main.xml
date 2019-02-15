@@ -7,6 +7,34 @@
     android:background="@color/colorPrimary">
 
     <LinearLayout
+        android:id="@+id/top_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/sign_out"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="LogOut"
+            android:scaleType="fitEnd"
+            android:tint="@color/colorActionBar"
+            app:srcCompat="@drawable/exitapp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/Android_linear"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
@@ -24,7 +52,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/textfield_background"
+            android:onClick="StartAndroidPlatformChooser"
             android:paddingTop="5dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             android:paddingBottom="5dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/androidlogo" />
@@ -47,11 +78,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:paddingStart="0dp"
-            android:text="Lets Get Started..."
+            android:text="Lets Get Started"
             android:textAlignment="viewStart"
-            android:textColor="@color/colorActionBar"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,9 +103,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Which platform are you going to be adding bugs to today?"
-            android:textColor="@color/colorActionBar"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <ImageView
@@ -98,11 +127,10 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:layout_below="@+id/ddm_logo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="24dp"
         android:orientation="horizontal">
 
@@ -112,55 +140,38 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/textfield_background"
+            android:onClick="StartApplePlatformChooser"
             android:paddingTop="5dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             android:paddingBottom="5dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/apple" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Android_linear"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/continue_button"
+        <TextView
+            android:id="@+id/OR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/background_1"
-            android:onClick="StartAndroidBugTracker"
-            android:text="CONTINUE"
-            android:textAlignment="center"
-            android:textColor="@android:color/white" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="false"
-        android:layout_marginTop="24dp"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/exitbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginEnd="24dp"
-            android:adjustViewBounds="true"
-            android:background="@android:color/transparent"
-            android:scaleType="centerCrop"
-            android:tint="@color/colorActionBar"
-            android:tintMode="add"
-            app:srcCompat="@drawable/signout" />
+            android:gravity="center"
+            android:text="OR"
+            android:textColor="@color/colorActionBar"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </RelativeLayout>
