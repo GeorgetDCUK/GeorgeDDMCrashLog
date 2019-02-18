@@ -13,8 +13,8 @@ public class Apple_Bug_Tracker2 extends AppCompatActivity {
         setContentView(R.layout.activity_apple_bug_tracker2);
     }
 
-    public void BackArrowToAndroid1(View view) {
-        Intent intent = new Intent(this, Android_Bug_Tracker.class);
+    public void BackArrowToApple1(View view) {
+        Intent intent = new Intent(this, Apple_Bug_Tracker.class);
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
         onBackPressed();
