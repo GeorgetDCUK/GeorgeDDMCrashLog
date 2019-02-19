@@ -29,4 +29,8 @@
         <item>iPhone 8</item>
         <item>iPhone 8 Plus</item>
     </string-array>
+    <string-array name="reproducable">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 </resources>

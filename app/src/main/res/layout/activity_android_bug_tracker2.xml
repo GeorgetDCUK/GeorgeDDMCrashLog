@@ -10,25 +10,89 @@
     tools:context=".Android_Bug_Tracker2">
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayout9"
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hypo_linear">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/resolved_field"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Is the crash resolved?"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/resolved_spinner"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/reproducable"
+            android:prompt="@string/app_version_hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <TextView
+            android:id="@+id/reproducable_field"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Is the crash reproducable?"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/reproducable_spinner"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/reproducable"
+            android:prompt="@string/app_version_hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:id="@+id/os_version"
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="What OS did the crash occur on?"
+            android:text="What OS version did the crash occur on?"
             android:textColor="@android:color/black" />
 
         <Spinner
@@ -84,14 +148,14 @@
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hypo_linear">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
             android:id="@+id/app_version"
@@ -220,7 +284,8 @@
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:text="CONTINUE"
+            android:onClick="SaveAndroidCrashData"
+            android:text="SAVE"
             android:textColor="@android:color/white" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -10,25 +10,89 @@
     tools:context=".Apple_Bug_Tracker2">
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayout9"
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/resolved_field"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Is the crash resolved?"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/resolved_spinner"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/reproducable"
+            android:prompt="@string/app_version_hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <TextView
+            android:id="@+id/reproducable_field"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Is the crash reproducable?"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/reproducable_spinner"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/reproducable"
+            android:prompt="@string/app_version_hint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:id="@+id/os_version"
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="What OS did the crash occur on?"
+            android:text="What OS version did the crash occur on?"
             android:textColor="@android:color/black" />
 
         <Spinner
@@ -95,9 +159,10 @@
             android:layout_weight="1"
             android:background="@drawable/background_1"
             android:foreground="?attr/selectableItemBackground"
-            android:state_pressed="true"
             android:gravity="center"
-            android:text="CONTINUE"
+            android:onClick="SaveAppleCrashData"
+            android:state_pressed="true"
+            android:text="SAVE"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
@@ -149,7 +214,7 @@
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:entries="@array/devices_array"
+            android:entries="@array/appledevices_array"
             android:prompt="@string/device_hint" />
 
     </LinearLayout>
@@ -159,7 +224,7 @@
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -207,7 +272,7 @@
             android:layout_height="24dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="BackArrowToApple1"
+            android:onClick="BackArrowToAndroid1"
             android:scaleType="fitStart"
             android:tint="@color/colorActionBar"
             app:srcCompat="@drawable/backarrow" />

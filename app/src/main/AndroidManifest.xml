@@ -18,12 +18,13 @@
         </activity>
         <activity android:name=".CrashLog_LogIn" />
         <activity android:name=".CrashLog_Main" />
-        <activity android:name=".Android_Bug_Tracker" />
-        <activity android:name=".Android_Bug_Tracker2" />
         <activity android:name=".Android_Platform_Choice" />
         <activity android:name=".Apple_Platform_Choice" />
         <activity android:name=".Apple_Bug_Tracker" />
-        <activity android:name=".Apple_Bug_Tracker2"></activity>
+        <activity android:name=".Apple_Bug_Tracker2"/>
+        <activity android:name=".Android_Bug_Tracker"/>
+        <activity android:name=".Android_Bug_Tracker2">
+        </activity>
     </application>
 
 </manifest>
