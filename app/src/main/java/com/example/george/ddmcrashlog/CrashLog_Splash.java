@@ -18,4 +18,10 @@ public class CrashLog_Splash extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
+
+    public void infoOnboardingView(View view) {
+        Intent intent = new Intent(this, OnboardingInfo.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.down_in, R.anim.down_out);
+    }
 }

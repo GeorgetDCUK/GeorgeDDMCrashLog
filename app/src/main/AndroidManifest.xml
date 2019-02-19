@@ -21,10 +21,10 @@
         <activity android:name=".Android_Platform_Choice" />
         <activity android:name=".Apple_Platform_Choice" />
         <activity android:name=".Apple_Bug_Tracker" />
-        <activity android:name=".Apple_Bug_Tracker2"/>
-        <activity android:name=".Android_Bug_Tracker"/>
-        <activity android:name=".Android_Bug_Tracker2">
-        </activity>
+        <activity android:name=".Apple_Bug_Tracker2" />
+        <activity android:name=".Android_Bug_Tracker" />
+        <activity android:name=".Android_Bug_Tracker2"></activity>
+        <activity android:name=".OnboardingInfo"></activity>
     </application>
 
 </manifest>
