@@ -10,6 +10,40 @@
     tools:context=".Apple_Bug_Tracker2">
 
     <LinearLayout
+        android:id="@+id/apple_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/android_image"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/apple" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Crash Details"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="8pt" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout9"
         android:layout_width="0dp"
         android:layout_height="53dp"
@@ -36,7 +70,6 @@
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:entries="@array/reproducable"
             android:prompt="@string/app_version_hint" />
 
     </LinearLayout>
@@ -106,40 +139,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/android_linear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0"
-            android:paddingStart="65sp"
-            android:text="Let's Track Apple"
-            android:textAlignment="center"
-            android:textColor="@color/colorActionBar"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/android_image"
-            android:layout_width="63dp"
-            android:layout_height="80dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/apple" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -199,7 +198,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/android_linear">
+        app:layout_constraintTop_toBottomOf="@+id/apple_linear">
 
         <TextView
             android:id="@+id/crash_num"
