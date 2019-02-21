@@ -8,6 +8,18 @@
     tools:context=".Android_Platform_Choice">
 
     <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/grobackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/apple_linear"
         android:layout_width="0dp"
         android:layout_height="113dp"
@@ -31,13 +43,13 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="363dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Which platform are we tracking a crash for?"
             android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="8pt" />
+            android:textSize="7pt" />
 
     </LinearLayout>
 
@@ -46,7 +58,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:layout_weight="0"
         android:gravity="center_vertical"
@@ -54,7 +66,7 @@
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
 
         <ImageButton
             android:id="@+id/back_button"
@@ -87,6 +99,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/lcp_background"
+        android:elevation="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/hypo_linear"
@@ -117,6 +130,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/hypo_background"
+        android:elevation="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/gro_linear"
@@ -147,6 +161,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="100dp"
         android:background="@drawable/background_1"
+        android:elevation="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"

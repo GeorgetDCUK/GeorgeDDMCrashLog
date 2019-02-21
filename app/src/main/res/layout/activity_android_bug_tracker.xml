@@ -7,134 +7,84 @@
     android:background="@color/colorPrimary"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:minHeight="250dp"
     tools:context=".Android_Bug_Tracker">
 
     <LinearLayout
-        android:id="@+id/linearLayout9"
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/grobackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
-        android:layout_height="73dp"
+        android:layout_height="56dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
-        android:gravity="left"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <TextView
-            android:id="@+id/crash_user_num"
+            android:id="@+id/textView9"
             android:layout_width="wrap_content"
-            android:layout_height="4dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="How many crashes have occured of this type?"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:textColor="@android:color/black" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radiobtn_min"
-                android:layout_width="wrap_content"
+                android:id="@+id/radioButton11"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
                 android:text="@string/_5" />
 
             <RadioButton
-                android:id="@+id/radiobtn_min2"
-                android:layout_width="wrap_content"
+                android:id="@+id/radioButton10"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
                 android:text="@string/_5_10" />
 
             <RadioButton
-                android:id="@+id/radiobtn_min3"
-                android:layout_width="wrap_content"
+                android:id="@+id/radioButton9"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
                 android:text="@string/_10_20" />
 
             <RadioButton
-                android:id="@+id/radiobtn_min4"
-                android:layout_width="wrap_content"
+                android:id="@+id/radioButton8"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
                 android:text="@string/_20" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="6dp"
-        android:gravity="left"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
-
-        <TextView
-            android:id="@+id/users_affected"
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_weight="1"
-            android:text="How many users has it affected?"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="9dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radiobtn_user1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
-                android:text="@string/_5" />
-
-            <RadioButton
-                android:id="@+id/radiobtn_user2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
-                android:text="@string/_5_10" />
-
-            <RadioButton
-                android:id="@+id/radiobtn_user3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
-                android:text="@string/_10_20" />
-
-            <RadioButton
-                android:id="@+id/radiobtn_user4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorActionBar"
-                android:text="@string/_20" />
-
-        </LinearLayout>
+        </RadioGroup>
 
     </LinearLayout>
 
@@ -281,12 +231,12 @@
         android:layout_width="0dp"
         android:layout_height="98dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/top_nav">
 
         <ImageView
             android:id="@+id/ddm_logo"
@@ -303,14 +253,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:layout_weight="0"
         android:orientation="horizontal"
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <ImageButton
             android:id="@+id/back_button"
@@ -367,6 +317,72 @@
             android:padding="8dp"
             android:textCursorDrawable="@drawable/black_typing_cursor"
             android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="How many users have been affected by it?"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
+                android:text="@string/_5" />
+
+            <RadioButton
+                android:id="@+id/radioButton13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
+                android:text="@string/_5_10" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
+                android:text="@string/_10_20" />
+
+            <RadioButton
+                android:id="@+id/radioButton15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/customradiobutton"
+                android:paddingStart="8dp"
+                android:text="@string/_20" />
+        </RadioGroup>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

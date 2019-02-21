@@ -7,13 +7,24 @@
     android:background="@color/colorPrimary">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/grobackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/top_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="24dp"
         android:layout_weight="0"
         android:gravity="center_vertical"
@@ -44,6 +55,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="144dp"
         android:layout_marginEnd="24dp"
+        android:elevation="10dp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -52,10 +64,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/textfield_background"
-            android:onClick="StartAndroidPlatformChooser"
-            android:paddingTop="5dp"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
+            android:onClick="StartAndroidPlatformChooser"
+            android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/androidlogo" />
@@ -132,6 +144,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="550dp"
         android:layout_marginEnd="24dp"
+        android:elevation="10dp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -140,10 +153,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/textfield_background"
-            android:onClick="StartApplePlatformChooser"
-            android:paddingTop="5dp"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
+            android:onClick="StartApplePlatformChooser"
+            android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/apple" />

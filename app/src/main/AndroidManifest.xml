@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CrashLog_LogIn" />
+        <activity android:name=".CrashLog_LogIn"/>
         <activity android:name=".CrashLog_Main" />
         <activity android:name=".Android_Platform_Choice" />
         <activity android:name=".Apple_Platform_Choice" />

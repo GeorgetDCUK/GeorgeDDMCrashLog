@@ -10,6 +10,18 @@
     tools:context=".Apple_Bug_Tracker2">
 
     <LinearLayout
+        android:id="@+id/linearLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/grobackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/apple_linear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -255,7 +267,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:layout_weight="0"
         android:gravity="center_vertical"
@@ -263,7 +275,7 @@
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
 
         <ImageButton
             android:id="@+id/back_button"

@@ -5,4 +5,6 @@
     android:id="@+id/onboarding_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grobackground" />
+    android:background="@drawable/grobackground" >
+
+</android.support.constraint.ConstraintLayout>

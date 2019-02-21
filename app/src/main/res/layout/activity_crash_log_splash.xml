@@ -7,6 +7,17 @@
     android:background="@android:color/white"
     tools:context=".CrashLog_Splash">
 
+    <!--RePresent Toolbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/grobackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
