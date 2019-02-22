@@ -10,6 +10,52 @@
     tools:context=".Android_Bug_Tracker2">
 
     <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/grobackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/apple_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/android_image"
+            android:layout_width="63dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/androidlogo" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Crash Details"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="8pt" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout9"
         android:layout_width="0dp"
         android:layout_height="53dp"
@@ -68,7 +114,6 @@
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:entries="@array/reproducable"
             android:prompt="@string/app_version_hint" />
 
     </LinearLayout>
@@ -110,7 +155,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:layout_weight="0"
         android:gravity="center_vertical"
@@ -118,7 +163,7 @@
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
 
         <ImageButton
             android:id="@+id/back_button"
@@ -186,7 +231,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hypo_linear">
+        app:layout_constraintTop_toBottomOf="@+id/apple_linear">
 
         <TextView
             android:id="@+id/crash_num"
@@ -203,40 +248,6 @@
             android:layout_weight="1"
             android:entries="@array/devices_array"
             android:prompt="@string/device_hint" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/hypo_linear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0"
-            android:paddingStart="65dp"
-            android:text="Let's Track Android"
-            android:textAlignment="center"
-            android:textColor="@color/colorActionBar"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/android_image"
-            android:layout_width="63dp"
-            android:layout_height="80dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/androidlogo" />
 
     </LinearLayout>
 

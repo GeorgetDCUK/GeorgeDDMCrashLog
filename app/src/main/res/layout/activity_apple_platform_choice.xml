@@ -8,11 +8,23 @@
     tools:context=".Apple_Platform_Choice">
 
     <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/grobackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/top_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:layout_weight="0"
         android:gravity="center_vertical"
@@ -20,7 +32,7 @@
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
 
         <ImageButton
             android:id="@+id/back_button"
@@ -53,6 +65,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/lcp_background"
+        android:elevation="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/hypo_linear"
@@ -66,9 +79,9 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="StartAppleBugTracker"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
+            android:onClick="StartAppleBugTracker"
             android:padding="16dp"
             android:scaleType="fitCenter"
             android:src="@drawable/lcplogo" />
@@ -83,6 +96,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/hypo_background"
+        android:elevation="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/gro_linear"
@@ -96,9 +110,9 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="StartAppleBugTracker"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
+            android:onClick="StartAppleBugTracker"
             android:padding="8dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/hypologo" />
@@ -111,8 +125,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/background_1"
+        android:elevation="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -125,9 +140,9 @@
             android:layout_width="320dp"
             android:layout_height="80dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
-            android:background="@android:color/transparent"
             android:onClick="StartAppleBugTracker"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/grologo" />
@@ -157,36 +172,36 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/android_linear"
+        android:id="@+id/apple_linear"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="113dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0"
-            android:paddingStart="65dp"
-            android:text="Let's Track Apple"
-            android:textAlignment="center"
-            android:textColor="@color/colorActionBar"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/android_image"
             android:layout_width="63dp"
             android:layout_height="80dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/apple" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Which platform are we tracking a crash for?"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="7pt" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
