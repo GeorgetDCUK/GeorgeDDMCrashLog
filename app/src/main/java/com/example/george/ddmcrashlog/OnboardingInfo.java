@@ -22,7 +22,9 @@ public class OnboardingInfo extends AppCompatActivity {
 
         findViewById(R.id.onboarding_constraint).setOnTouchListener(new OnSwipeTouchListener(OnboardingInfo.this) {
             public void onSwipeTop() {
-
+                Intent intent2 = new Intent(OnboardingInfo.this, CrashLog_Splash.class);
+                startActivity(intent2);
+                overridePendingTransition(R.anim.up_in, R.anim.up_out);
             }
         });
     }
