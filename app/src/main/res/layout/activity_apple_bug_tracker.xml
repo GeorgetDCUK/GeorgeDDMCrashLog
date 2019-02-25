@@ -45,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checkedButton="@+id/radioButton12"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -111,6 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checkedButton="@+id/radioButton11"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -324,7 +326,7 @@
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:onClick="AppleBugTracker2"
+            android:onClick="BugTrackerScreen2"
             android:text="CONTINUE"
             android:textColor="@android:color/white" />
     </LinearLayout>

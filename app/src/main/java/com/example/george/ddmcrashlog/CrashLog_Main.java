@@ -19,6 +19,7 @@ public class CrashLog_Main extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crash_log_main);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
     // Start Android Platform chooser - Start to track bugs and connect to sql local to store in db

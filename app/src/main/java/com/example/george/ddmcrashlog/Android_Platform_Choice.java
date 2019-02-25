@@ -19,6 +19,7 @@ public class Android_Platform_Choice extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
     public void StartAndroidBugTracker(View view) {

@@ -18,6 +18,12 @@
         <item>Samsung S5</item>
     </string-array>
     <string name="app_version_hint">Choose a app version</string>
+    <string name="what_device_s_has_the_crash_occured_on">What device(s) has the crash occured on?</string>
+    <string name="what_app_version_s_did_the_crash_occrur_on">What App version(s) did the crash occrur on?</string>
+    <string name="what_os_version_did_the_crash_occur_on">What OS version did the crash occur on?</string>
+    <string name="is_the_crash_reproducable">Is the crash reproducable?</string>
+    <string name="is_the_crash_resolved">Is the crash resolved?</string>
+    <string name="crash_details">Crash Details</string>
     <string-array name="appversion_array">
         <item>Latest</item>
     </string-array>

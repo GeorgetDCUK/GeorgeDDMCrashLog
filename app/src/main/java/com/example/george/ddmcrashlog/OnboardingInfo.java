@@ -19,6 +19,7 @@ public class OnboardingInfo extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding_info);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         findViewById(R.id.onboarding_constraint).setOnTouchListener(new OnSwipeTouchListener(OnboardingInfo.this) {
             public void onSwipeTop() {

@@ -9,22 +9,42 @@
         android:roundIcon="@drawable/ddmlogo2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CrashLog_Splash">
+        <activity android:name=".CrashLog_Splash"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CrashLog_LogIn"/>
-        <activity android:name=".CrashLog_Main" />
-        <activity android:name=".Android_Platform_Choice" />
-        <activity android:name=".Apple_Platform_Choice" />
-        <activity android:name=".Apple_Bug_Tracker" />
-        <activity android:name=".Apple_Bug_Tracker2" />
-        <activity android:name=".Android_Bug_Tracker" />
-        <activity android:name=".Android_Bug_Tracker2"></activity>
-        <activity android:name=".OnboardingInfo"></activity>
+        <activity android:name=".CrashLog_LogIn"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".CrashLog_Main"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Android_Platform_Choice"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Apple_Platform_Choice"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Apple_Bug_Tracker"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Apple_Bug_Tracker2"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Android_Bug_Tracker"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".Android_Bug_Tracker2"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".OnboardingInfo"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
     </application>
 
 </manifest>

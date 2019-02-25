@@ -19,6 +19,7 @@ public class CrashLog_Splash extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crash_log_splash);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         findViewById(R.id.splash_constraint).setOnTouchListener(new OnSwipeTouchListener(CrashLog_Splash.this) {
             public void onSwipeBottom() {
