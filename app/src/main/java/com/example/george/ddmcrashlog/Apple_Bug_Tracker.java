@@ -17,6 +17,9 @@ public class Apple_Bug_Tracker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apple_bug_tracker);
+
+        // Making tool bar/status bar disappear so i can put in custom one of my own
+        // Detecting the sdk version allows to remove status bar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -32,13 +35,16 @@ public class Apple_Bug_Tracker extends AppCompatActivity {
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
         onBackPressed();
     }
-
+    // Log user out functionality
     public void LogOut(View view) {
         Intent intent = new Intent(this, CrashLog_LogIn.class);
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
 
+    // Find edit text id's to validate input for
+    // Compare the fields, if empty -> error toasts
+    // If all fields filled, next screen
     public void BugTrackerScreen2(View view) {
 
         EditText editTextID = (EditText) findViewById(R.id.crash_id);

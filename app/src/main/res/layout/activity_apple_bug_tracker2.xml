@@ -283,7 +283,7 @@
             android:layout_height="24dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="BackArrowToAndroid1"
+            android:onClick="BackArrowToApple1"
             android:scaleType="fitStart"
             android:tint="@color/colorActionBar"
             app:srcCompat="@drawable/backarrow" />

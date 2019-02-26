@@ -14,6 +14,9 @@ public class Android_Platform_Choice extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_platform_choice);
+
+        // Making tool bar/status bar disappear so i can put in custom one of my own
+        // Detecting the sdk version allows to remove status bar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);

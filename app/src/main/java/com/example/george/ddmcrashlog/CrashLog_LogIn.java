@@ -16,6 +16,9 @@ public class CrashLog_LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crash_log_login);
+
+        // Making tool bar/status bar disappear so i can put in custom one of my own
+        // Detecting the sdk version allows to remove status bar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -24,9 +27,13 @@ public class CrashLog_LogIn extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
+    // Detect the edit text fields to validate inputs
+    // Checking user credentials entered are valid to proceed in app
+    // If one or the other are empty -> Toast and blocked from proceeding
+    // Add custom anim transition to go to next screen
     public void LogInValidation(View view) {
-        EditText email = (EditText) findViewById(R.id.email_field);
-        EditText password = (EditText) findViewById(R.id.password_field);
+        EditText email = findViewById(R.id.email_field);
+        EditText password = findViewById(R.id.password_field);
 
         if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please fill in your email and password to log in", Toast.LENGTH_SHORT).show();
@@ -40,13 +47,14 @@ public class CrashLog_LogIn extends AppCompatActivity {
             overridePendingTransition(R.anim.right_in, R.anim.right_out);        }
     }
 
-    // Back arrow functionality
+    // Back arrow functionality to go back to the splash screen
     public void BackArrow(View view) {
         Intent intent = new Intent(this, CrashLog_Splash.class);
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
 
+    // Pressing the 'i' to take user to onboarding screen
     public void infoOnboardingView2(View view) {
         Intent intent = new Intent(this, OnboardingInfo.class);
         startActivity(intent);
