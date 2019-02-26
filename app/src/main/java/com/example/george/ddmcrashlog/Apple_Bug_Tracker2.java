@@ -20,6 +20,7 @@ public class Apple_Bug_Tracker2 extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
     public void BackArrowToAndroid1(View view) {

@@ -20,6 +20,7 @@ public class Android_Bug_Tracker2 extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_bug_tracker2);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
     // Go back to Android bug tracker screen 1

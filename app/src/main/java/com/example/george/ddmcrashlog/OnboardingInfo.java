@@ -1,8 +1,10 @@
 package com.example.george.ddmcrashlog;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -17,6 +19,21 @@ public class OnboardingInfo extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding_info);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+        findViewById(R.id.onboarding_constraint).setOnTouchListener(new OnSwipeTouchListener(OnboardingInfo.this) {
+            public void onSwipeTop() {
+                Intent intent2 = new Intent(OnboardingInfo.this, CrashLog_Splash.class);
+                startActivity(intent2);
+                overridePendingTransition(R.anim.up_in, R.anim.up_out);
+            }
+        });
+    }
+
+    public void BackToSplashFromPopUp(View view) {
+        Intent intent = new Intent(this, CrashLog_Splash.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.up_in, R.anim.up_out);
     }
 }
 

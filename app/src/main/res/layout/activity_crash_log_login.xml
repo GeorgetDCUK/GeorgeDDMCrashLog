@@ -219,7 +219,7 @@
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:onClick="SignInClick"
+            android:onClick="LogInValidation"
             android:text="SIGN IN "
             android:textColor="@android:color/white" />
     </LinearLayout>

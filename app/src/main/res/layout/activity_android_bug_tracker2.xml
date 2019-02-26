@@ -48,7 +48,7 @@
             android:layout_width="363dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Crash Details"
+            android:text="@string/crash_details"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="8pt" />
@@ -74,7 +74,7 @@
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Is the crash resolved?"
+            android:text="@string/is_the_crash_resolved"
             android:textColor="@android:color/black" />
 
         <Spinner
@@ -106,7 +106,7 @@
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Is the crash reproducable?"
+            android:text="@string/is_the_crash_reproducable"
             android:textColor="@android:color/black" />
 
         <Spinner
@@ -137,7 +137,7 @@
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="What OS version did the crash occur on?"
+            android:text="@string/what_os_version_did_the_crash_occur_on"
             android:textColor="@android:color/black" />
 
         <Spinner
@@ -207,7 +207,7 @@
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="What App version(s) did the crash occrur on?"
+            android:text="@string/what_app_version_s_did_the_crash_occrur_on"
             android:textColor="@android:color/black" />
 
         <Spinner
@@ -238,7 +238,7 @@
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="What device(s) has the crash occured on?"
+            android:text="@string/what_device_s_has_the_crash_occured_on"
             android:textColor="@android:color/black" />
 
         <Spinner
