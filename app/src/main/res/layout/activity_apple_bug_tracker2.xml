@@ -82,6 +82,7 @@
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:entries="@array/reproducable"
             android:prompt="@string/app_version_hint" />
 
     </LinearLayout>
