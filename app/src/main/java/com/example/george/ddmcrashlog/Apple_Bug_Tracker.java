@@ -1,7 +1,6 @@
 package com.example.george.ddmcrashlog;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -30,11 +29,12 @@ public class Apple_Bug_Tracker extends AppCompatActivity {
 
     // Go back to Main Screen
     public void BackArrowToMain(View view) {
-        Intent intent = new Intent(this,Apple_Platform_Choice.class);
+        Intent intent = new Intent(this, Apple_Platform_Choice.class);
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
         onBackPressed();
     }
+
     // Log user out functionality
     public void LogOut(View view) {
         Intent intent = new Intent(this, CrashLog_LogIn.class);
@@ -45,19 +45,36 @@ public class Apple_Bug_Tracker extends AppCompatActivity {
     // Find edit text id's to validate input for
     // Compare the fields, if empty -> error toasts
     // If all fields filled, next screen
-    public void BugTrackerScreen2(View view) {
+    public void AppleTrackerValidation(View view) {
 
-        EditText editTextID = (EditText) findViewById(R.id.crash_id);
-        EditText editTextLocation = (EditText) findViewById(R.id.location_field);
-        EditText editTextDescription = (EditText) findViewById(R.id.description_field);
-        Drawable errorBackground = getApplicationContext().getResources().getDrawable(R.drawable.errorbackground);
+        EditText editTextID = findViewById(R.id.crash_id);
+        EditText editTextLocation = findViewById(R.id.location_field);
+        EditText editTextDescription = findViewById(R.id.description_field);
 
-        if (editTextID.getText().toString().isEmpty() || editTextLocation.getText().toString().isEmpty() || editTextDescription.getText().toString().isEmpty()) {
+        if (editTextID.getText().toString().isEmpty() ||
+                editTextLocation.getText().toString().isEmpty() ||
+                editTextDescription.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please fill in the required fields", Toast.LENGTH_SHORT).show();
+            editTextID.setError("Please fill in the crash ID number");
+            editTextLocation.setError("Please fill in the crash location");
+            editTextDescription.setError("Please provide a description or steps of the crash");
+            editTextID.setBackgroundResource(R.drawable.errorbackground);
+            editTextLocation.setBackgroundResource(R.drawable.errorbackground);
+            editTextDescription.setBackgroundResource(R.drawable.errorbackground);
         } else {
+            editTextID.setError(null);
+            editTextLocation.setError(null);
+            editTextDescription.setError(null);
+            editTextID.setBackgroundResource(R.drawable.successbackground);
+            editTextLocation.setBackgroundResource(R.drawable.successbackground);
+            editTextDescription.setBackgroundResource(R.drawable.successbackground);
             Intent intent = new Intent(this, Apple_Bug_Tracker2.class);
             startActivity(intent);
             overridePendingTransition(R.anim.right_in, R.anim.right_out);
         }
     }
 }
+
+
+
+

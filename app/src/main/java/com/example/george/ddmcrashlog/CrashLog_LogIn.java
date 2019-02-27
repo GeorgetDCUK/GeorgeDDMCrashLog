@@ -37,14 +37,27 @@ public class CrashLog_LogIn extends AppCompatActivity {
 
         if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please fill in your email and password to log in", Toast.LENGTH_SHORT).show();
+            email.setError("Please fill in your email");
+            password.setError("Please fill in your password");
+            email.setBackgroundResource(R.drawable.errorbackground);
+            password.setBackgroundResource(R.drawable.errorbackground);
         }
         else if (!(email.getText().toString().matches("georget@ddm.health") && password.getText().toString().matches("George"))) {
             Toast.makeText(this, "Credentials are invalid, please try again", Toast.LENGTH_SHORT).show();
+            email.setError("Email is Incorrect");
+            password.setError("Password is Incorrect");
+            email.setBackgroundResource(R.drawable.errorbackground);
+            password.setBackgroundResource(R.drawable.errorbackground);
         }
         else {
+            email.setBackgroundResource(R.drawable.successbackground);
+            password.setBackgroundResource(R.drawable.successbackground);
+            email.setError(null);
+            password.setError(null);
             Intent intent = new Intent(this, CrashLog_Main.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.right_in, R.anim.right_out);        }
+            overridePendingTransition(R.anim.right_in, R.anim.right_out);
+        }
     }
 
     // Back arrow functionality to go back to the splash screen
