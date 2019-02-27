@@ -44,6 +44,9 @@ public class Apple_Bug_Tracker extends AppCompatActivity {
 
     // Find edit text id's to validate input for
     // Compare the fields, if empty -> error toasts
+    // error messages
+    // change text field backgrounds when error/correct credentials
+    // Red for error and don't match, and green for successful
     // If all fields filled, next screen
     public void AppleTrackerValidation(View view) {
 
@@ -68,6 +71,8 @@ public class Apple_Bug_Tracker extends AppCompatActivity {
             editTextID.setBackgroundResource(R.drawable.successbackground);
             editTextLocation.setBackgroundResource(R.drawable.successbackground);
             editTextDescription.setBackgroundResource(R.drawable.successbackground);
+
+            // If success - take user to next screen with overriden transition
             Intent intent = new Intent(this, Apple_Bug_Tracker2.class);
             startActivity(intent);
             overridePendingTransition(R.anim.right_in, R.anim.right_out);
