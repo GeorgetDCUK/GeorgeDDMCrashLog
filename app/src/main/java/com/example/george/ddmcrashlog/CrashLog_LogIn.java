@@ -58,8 +58,6 @@ public class CrashLog_LogIn extends AppCompatActivity {
             Intent intent = new Intent(this, CrashLog_Main.class);
             startActivity(intent);
             overridePendingTransition(R.anim.right_in, R.anim.right_out);
-
-            // boom
         }
     }
 
