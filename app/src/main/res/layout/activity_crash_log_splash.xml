@@ -86,7 +86,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_height="72dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -116,6 +116,15 @@
             android:gravity="center"
             android:text="Learn More"
             android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="(Swipe up)"
+            android:textColor="@android:color/darker_gray" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

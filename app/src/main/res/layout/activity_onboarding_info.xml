@@ -7,6 +7,25 @@
     android:layout_height="match_parent"
     android:background="@drawable/grobackground">
 
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/grobackground"/>
+
+        <ImageView
+            android:id="@+id/background_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/grobackground"/>
+
+    </FrameLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout16"
         android:layout_width="0dp"
@@ -71,10 +90,14 @@
     <LinearLayout
         android:id="@+id/linearLayout19"
         android:layout_width="0dp"
-        android:layout_height="321dp"
+        android:layout_height="0dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,18 +105,18 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="112dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="8dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/lcplogo" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="112dp"
+            android:layout_height="149dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:padding="12dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/hypologo" />
@@ -101,12 +124,9 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
-            android:layout_height="112dp"
+            android:layout_height="190dp"
             android:layout_weight="1"
-            android:paddingTop="8dp"
             android:scaleType="fitCenter"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
             app:srcCompat="@drawable/grologo" />
 
     </LinearLayout>
@@ -130,21 +150,22 @@
             android:layout_weight="1"
             android:text="Track all of our incoming user crashes with the DDM Crash Log, supported by Diabetes Digital Media"
             android:textAlignment="center"
+            android:textAllCaps="false"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout20"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="26dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
+        android:gravity="bottom"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout19">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/imageButton2"

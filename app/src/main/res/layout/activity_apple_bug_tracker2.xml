@@ -82,6 +82,7 @@
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:entries="@array/reproducable"
             android:prompt="@string/app_version_hint" />
 
     </LinearLayout>
@@ -283,7 +284,7 @@
             android:layout_height="24dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="BackArrowToAndroid1"
+            android:onClick="BackArrowToApple1"
             android:scaleType="fitStart"
             android:tint="@color/colorActionBar"
             app:srcCompat="@drawable/backarrow" />

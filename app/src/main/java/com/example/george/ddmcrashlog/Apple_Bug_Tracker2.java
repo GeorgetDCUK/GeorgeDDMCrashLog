@@ -15,6 +15,9 @@ public class Apple_Bug_Tracker2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apple_bug_tracker2);
+
+        // Making tool bar/status bar disappear so i can put in custom one of my own
+        // Detecting the sdk version allows to remove status bar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -23,18 +26,20 @@ public class Apple_Bug_Tracker2 extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
-    public void BackArrowToAndroid1(View view) {
+    // Takes user back to first apple bug tracker screen
+    public void BackArrowToApple1(View view) {
         Intent intent = new Intent(this, Android_Bug_Tracker.class);
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
         onBackPressed();
     }
+    // Log user out functionality
     public void LogOut(View view) {
         Intent intent = new Intent(this, CrashLog_LogIn.class);
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
-
+    // Save apple crash data inputs
     public void SaveAppleCrashData(View view) {
         Toast.makeText(this, "Saved Crash Data to Database", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Apple_Platform_Choice.class);

@@ -12,6 +12,9 @@ public class CrashLog_Main extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        // Making tool bar/status bar disappear so i can put in custom one of my own
+        // Detecting the sdk version allows to remove status bar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -28,13 +31,13 @@ public class CrashLog_Main extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
-
+    // Starts apple app platform chooser
     public void StartApplePlatformChooser(View view) {
         Intent intent = new Intent(this, Apple_Platform_Choice.class);
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
-
+    // Log user out functionality
     public void LogOut(View view) {
         Intent intent = new Intent(this, CrashLog_LogIn.class);
         startActivity(intent);
