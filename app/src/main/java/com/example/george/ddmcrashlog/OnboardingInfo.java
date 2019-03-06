@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.CycleInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
 public class OnboardingInfo extends AppCompatActivity {

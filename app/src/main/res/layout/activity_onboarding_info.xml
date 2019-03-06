@@ -8,21 +8,23 @@
     android:background="@drawable/grobackground">
 
     <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
 
         <ImageView
             android:id="@+id/background_one"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/grobackground"/>
+            android:src="@drawable/grobackground" />
 
         <ImageView
             android:id="@+id/background_two"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/grobackground"/>
+            android:src="@drawable/grobackground" />
 
     </FrameLayout>
 
@@ -31,15 +33,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
         android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/samsung_image_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout17">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
 
         <TextView
             android:id="@+id/textView6"
@@ -63,17 +66,56 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="162dp"
+        android:id="@+id/linearLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout17">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/lcplogo" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:srcCompat="@drawable/grologo" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hypologo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout20">
 
         <ImageView
             android:id="@+id/ddm_logo"
@@ -88,55 +130,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout19"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:orientation="vertical"
-        android:padding="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout16">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/lcplogo" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="149dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="12dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/hypologo" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/grologo" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayout17"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,13 +143,35 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Track all of our incoming user crashes with the DDM Crash Log, supported by Diabetes Digital Media"
+            android:text="Collating data is our love! Helping users overcoming app issues starts here!"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/samsung_image_layout"
+        android:layout_width="0dp"
+        android:layout_height="349dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/samsungimage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/samsungmockup" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -159,13 +179,14 @@
         android:layout_width="0dp"
         android:layout_height="26dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
         android:gravity="bottom"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:rotation="180"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -182,6 +203,7 @@
             android:scaleY="2"
             android:tint="@android:color/white"
             app:srcCompat="@drawable/uparrow" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
