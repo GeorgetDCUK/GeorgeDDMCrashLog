@@ -13,12 +13,52 @@
     <LinearLayout
         android:id="@+id/linearLayout8"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="60dp"
         android:background="@drawable/grobackground"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:onClick="BackArrowToMain"
+            android:scaleType="fitCenter"
+            android:tint="@android:color/white"
+            android:visibility="visible"
+            app:srcCompat="@drawable/backarrow" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="android tracking"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:onClick="LogOut"
+            android:scaleType="fitCenter"
+            android:tint="@android:color/white"
+            android:visibility="visible"
+            app:srcCompat="@drawable/exitapp" />
 
     </LinearLayout>
 
@@ -233,12 +273,12 @@
         android:layout_width="0dp"
         android:layout_height="98dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_nav">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <ImageView
             android:id="@+id/ddm_logo"
@@ -248,43 +288,6 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             app:srcCompat="@drawable/ddmlogo2" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/top_nav"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:layout_weight="0"
-        android:orientation="horizontal"
-        android:padding="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
-
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="BackArrowToMain"
-            android:scaleType="fitStart"
-            android:tint="@color/colorActionBar"
-            app:srcCompat="@drawable/backarrow" />
-
-        <ImageButton
-            android:id="@+id/sign_out"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="LogOut"
-            android:scaleType="fitEnd"
-            android:tint="@color/colorActionBar"
-            app:srcCompat="@drawable/exitapp" />
     </LinearLayout>
 
     <LinearLayout
