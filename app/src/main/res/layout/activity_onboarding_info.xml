@@ -34,11 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
         android:gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/samsung_image_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +46,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="Made with "
             android:textColor="@android:color/white" />
@@ -56,13 +54,13 @@
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:scaleType="fitStart"
+            android:layout_height="91dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
             android:scaleX="0.5"
             android:scaleY="0.5"
             android:tint="@android:color/white"
-            app:srcCompat="@drawable/hearticon" />
+            app:srcCompat="@drawable/hearticongradient" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,7 +68,6 @@
         android:layout_width="match_parent"
         android:layout_height="99dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,11 +152,13 @@
     <LinearLayout
         android:id="@+id/samsung_image_layout"
         android:layout_width="0dp"
-        android:layout_height="349dp"
+        android:layout_height="265dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:layout_weight="1"
+        android:background="@drawable/grobackgroundwithwhiteborder"
+        android:elevation="10dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +168,9 @@
             android:id="@+id/samsungimage1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:elevation="10dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/samsungmockup" />
 
     </LinearLayout>
