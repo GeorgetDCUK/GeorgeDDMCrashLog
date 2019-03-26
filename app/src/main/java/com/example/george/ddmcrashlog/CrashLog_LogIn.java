@@ -72,11 +72,4 @@ public class CrashLog_LogIn extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
-
-    // Pressing the 'i' to take user to onboarding screen
-    public void infoOnboardingView2(View view) {
-        Intent intent = new Intent(this, OnboardingInfo.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.down_in, R.anim.down_out);
-    }
 }
