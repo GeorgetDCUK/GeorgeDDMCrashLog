@@ -30,7 +30,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="0"
-            android:background="@android:color/transparent"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:onClick="BackArrowToMain"
             android:scaleType="fitCenter"
             android:tint="@android:color/white"
@@ -54,8 +54,8 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="0"
-            android:background="@android:color/transparent"
             android:onClick="LogOut"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="fitCenter"
             android:tint="@android:color/white"
             android:visibility="visible"
@@ -98,6 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:button="@drawable/customradiobutton"
                 android:paddingStart="8dp"
                 android:text="@string/_5" />
@@ -108,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@drawable/customradiobutton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:paddingStart="8dp"
                 android:text="@string/_5_10" />
 
@@ -117,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@drawable/customradiobutton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:paddingStart="8dp"
                 android:text="@string/_10_20" />
 
@@ -126,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@drawable/customradiobutton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:paddingStart="8dp"
                 android:text="@string/_20" />
         </RadioGroup>
@@ -263,7 +267,7 @@
             android:layout_weight="1"
             android:background="@drawable/background_1"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:onClick="BugTrackerScreen2"
             android:text="CONTINUE"
@@ -360,6 +364,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@drawable/customradiobutton"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:paddingStart="8dp"
                 android:text="@string/_5" />
 
@@ -367,6 +372,7 @@
                 android:id="@+id/radioButton13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_weight="1"
                 android:button="@drawable/customradiobutton"
                 android:paddingStart="8dp"
@@ -377,6 +383,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:button="@drawable/customradiobutton"
                 android:paddingStart="8dp"
                 android:text="@string/_10_20" />
@@ -386,6 +393,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:button="@drawable/customradiobutton"
                 android:paddingStart="8dp"
                 android:text="@string/_20" />
