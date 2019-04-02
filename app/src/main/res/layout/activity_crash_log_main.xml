@@ -75,9 +75,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/textfield_background"
+            android:background="@color/transparent"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="StartAndroidPlatformChooser"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -160,13 +159,12 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton10"
+            android:id="@+id/apple_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/textfield_background"
+            android:background="@color/transparent"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="StartApplePlatformChooser"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"

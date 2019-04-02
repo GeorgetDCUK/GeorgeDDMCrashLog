@@ -69,6 +69,12 @@ public class CrashLog_LogIn extends AppCompatActivity {
         }
     }
 
+    public void ShortCut(View view) {
+        Intent intent = new Intent(this, CrashLog_Main.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.right_in, R.anim.right_out);
+    }
+
     // Back arrow functionality to go back to the splash screen
     public void BackArrow(View view) {
         Intent intent = new Intent(this, CrashLog_Splash.class);

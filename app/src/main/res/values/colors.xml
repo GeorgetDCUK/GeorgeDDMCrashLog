@@ -7,4 +7,6 @@
     <color name="colorMedium">#54a0f1</color>
     <color name="colorHypo">#d7402f</color>
     <color name="colorSuccess">#1f9c1f</color>
+    <color name="colorGroBlue">#0078f8</color>
+    <color name="colorGroPink">#b134ff</color>
 </resources>
