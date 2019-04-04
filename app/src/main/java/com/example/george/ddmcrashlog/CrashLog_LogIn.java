@@ -46,15 +46,13 @@ public class CrashLog_LogIn extends AppCompatActivity {
             password.setError("Please fill in your password");
             email.setBackgroundResource(R.drawable.errorbackground);
             password.setBackgroundResource(R.drawable.errorbackground);
-        }
-        else if (!(email.getText().toString().matches("georget@ddm.health") && password.getText().toString().matches("George"))) {
+        } else if (!(email.getText().toString().matches("georget@ddm.health") && password.getText().toString().matches("George"))) {
             Toast.makeText(this, "Credentials are invalid, please try again", Toast.LENGTH_SHORT).show();
             email.setError("Email is Incorrect");
             password.setError("Password is Incorrect");
             email.setBackgroundResource(R.drawable.errorbackground);
             password.setBackgroundResource(R.drawable.errorbackground);
-        }
-        else {
+        } else {
             email.setBackgroundResource(R.drawable.successbackground);
             password.setBackgroundResource(R.drawable.successbackground);
             email.setError(null);
