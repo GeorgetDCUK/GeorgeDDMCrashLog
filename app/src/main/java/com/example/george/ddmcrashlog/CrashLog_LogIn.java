@@ -40,14 +40,18 @@ public class CrashLog_LogIn extends AppCompatActivity {
         EditText email = findViewById(R.id.email_field);
         EditText password = findViewById(R.id.password_field);
 
-        if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please fill in your email and password to log in", Toast.LENGTH_SHORT).show();
+        if (email == null || email.getText().toString().isEmpty() ||
+                password.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please fill in your email and password to log in",
+                    Toast.LENGTH_SHORT).show();
             email.setError("Please fill in your email");
             password.setError("Please fill in your password");
             email.setBackgroundResource(R.drawable.errorbackground);
             password.setBackgroundResource(R.drawable.errorbackground);
-        } else if (!(email.getText().toString().matches("georget@ddm.health") && password.getText().toString().matches("George"))) {
-            Toast.makeText(this, "Credentials are invalid, please try again", Toast.LENGTH_SHORT).show();
+        } else if (!(email.getText().toString().matches("georget@ddm.health") &&
+                password.getText().toString().matches("George"))) {
+            Toast.makeText(this, "Credentials are invalid, please try again",
+                    Toast.LENGTH_SHORT).show();
             email.setError("Email is Incorrect");
             password.setError("Password is Incorrect");
             email.setBackgroundResource(R.drawable.errorbackground);

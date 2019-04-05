@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Android_Bug_Tracker extends AppCompatActivity {
+public class  Android_Bug_Tracker extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,25 +39,29 @@ public class Android_Bug_Tracker extends AppCompatActivity {
         EditText editTextDescription = (EditText) findViewById(R.id.description_field);
         // Drawable errorBackground = getApplicationContext().getResources().getDrawable(R.drawable.errorbackground);
 
-        if (editTextID.getText().toString().isEmpty() || editTextLocation.getText().toString().isEmpty() || editTextDescription.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please fill in the required fields", Toast.LENGTH_SHORT).show();
-            editTextID.setError("Please fill in the crash ID number");
-            editTextLocation.setError("Please fill in the crash location");
-            editTextDescription.setError("Please provide a description or steps of the crash");
-            editTextID.setBackgroundResource(R.drawable.errorbackground);
-            editTextLocation.setBackgroundResource(R.drawable.errorbackground);
-            editTextDescription.setBackgroundResource(R.drawable.errorbackground);
-
-        } else {
-            editTextID.setError(null);
-            editTextLocation.setError(null);
-            editTextDescription.setError(null);
-            editTextID.setBackgroundResource(R.drawable.successbackground);
-            editTextLocation.setBackgroundResource(R.drawable.successbackground);
-            editTextDescription.setBackgroundResource(R.drawable.successbackground);
-            Intent intent = new Intent(this, Android_Bug_Tracker2.class);
-            startActivity(intent);
-            overridePendingTransition(R.anim.right_in, R.anim.right_out);
+        try {
+            if (editTextID.getText().toString().isEmpty() || editTextLocation.getText().toString().isEmpty() || editTextDescription.getText().toString().isEmpty()) {
+                Toast.makeText(this, "Please fill in the required fields", Toast.LENGTH_SHORT).show();
+                editTextID.setError("Please fill in the crash ID number");
+                editTextLocation.setError("Please fill in the crash location");
+                editTextDescription.setError("Please provide a description or steps of the crash");
+                editTextID.setBackgroundResource(R.drawable.errorbackground);
+                editTextLocation.setBackgroundResource(R.drawable.errorbackground);
+                editTextDescription.setBackgroundResource(R.drawable.errorbackground);
+                throw new IllegalStateException();
+            } else {
+                editTextID.setError(null);
+                editTextLocation.setError(null);
+                editTextDescription.setError(null);
+                editTextID.setBackgroundResource(R.drawable.successbackground);
+                editTextLocation.setBackgroundResource(R.drawable.successbackground);
+                editTextDescription.setBackgroundResource(R.drawable.successbackground);
+                Intent intent = new Intent(this, Android_Bug_Tracker2.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.right_out);
+            }
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
         }
     }
     // Go back to Main Screen (Back arrow trail back)
