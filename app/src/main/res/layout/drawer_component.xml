@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/green_tick"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_weight="1"

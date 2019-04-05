@@ -11,6 +11,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -53,6 +59,19 @@ public class Android_Bug_Tracker2 extends AppCompatActivity {
 
     // Saves the android crash data inputted
     public void SaveAndroidCrashData(View view) {
+
+        RotateAnimation anim = new RotateAnimation(0f, 350f, 15f, 15f);
+        anim.setInterpolator(new LinearInterpolator());
+        anim.setRepeatCount(Animation.INFINITE);
+        anim.setDuration(700);
+
+        // Start animating the image
+        final ImageView splash = findViewById(R.id.green_tick);
+        splash.startAnimation(anim);
+
+        // Later.. stop the animation
+        // splash.setAnimation(null);
+
         if (mEditBottomSheetDialog == null) {
             mEditBottomSheetDialog = new Dialog(this, R.style.MaterialDialogSheet);
         }
