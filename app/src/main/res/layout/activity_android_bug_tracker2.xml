@@ -302,4 +302,9 @@
             android:text="SAVE"
             android:textColor="@android:color/white" />
     </LinearLayout>
+
+    <include
+        layout="@layout/drawer_component"
+        android:visibility="invisible" />
+
 </android.support.constraint.ConstraintLayout>
