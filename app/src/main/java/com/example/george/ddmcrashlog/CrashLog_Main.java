@@ -1,6 +1,8 @@
 package com.example.george.ddmcrashlog;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.graphics.Path;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -40,10 +42,10 @@ public class CrashLog_Main extends AppCompatActivity {
     // Start Android Platform chooser - Start to track bugs and connect to sql local to store in db
     public void StartAndroidPlatformChooser(View view) {
         final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
-        // Use bounce interpolator with amplitude 0.2 and frequency 20
         MyBounceInterpolator interpolator = new MyBounceInterpolator(1, 2000);
         myAnim.setInterpolator(interpolator);
         androidButton.startAnimation(myAnim);
+
         Intent intent = new Intent(this, Android_Platform_Choice.class);
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
@@ -51,10 +53,16 @@ public class CrashLog_Main extends AppCompatActivity {
     // Starts apple app platform chooser
     public void StartApplePlatformChooser(View view) {
         final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
-        // Use bounce interpolator with amplitude 0.2 and frequency 20
         MyBounceInterpolator interpolator = new MyBounceInterpolator(1, 2000);
         myAnim.setInterpolator(interpolator);
         appleButton.startAnimation(myAnim);
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            ObjectAnimator animator = ObjectAnimator.ofFloat(view, "translationX", 3000f);
+//            animator.setDuration(400);
+//            animator.start();
+//        }
+
         Intent intent = new Intent(this, Apple_Platform_Choice.class);
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
