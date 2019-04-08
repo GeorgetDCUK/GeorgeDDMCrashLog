@@ -20,7 +20,6 @@ public class CrashLog_Main extends AppCompatActivity {
     ImageButton androidButton;
     ImageButton appleButton;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
