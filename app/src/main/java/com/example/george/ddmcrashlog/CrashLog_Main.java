@@ -11,6 +11,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
+import java.util.Timer;
+
 public class CrashLog_Main extends AppCompatActivity {
 
     ImageButton androidButton;
@@ -39,7 +41,7 @@ public class CrashLog_Main extends AppCompatActivity {
     public void StartAndroidPlatformChooser(View view) {
         final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
         // Use bounce interpolator with amplitude 0.2 and frequency 20
-        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 200);
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(1, 2000);
         myAnim.setInterpolator(interpolator);
         androidButton.startAnimation(myAnim);
         Intent intent = new Intent(this, Android_Platform_Choice.class);
@@ -50,7 +52,7 @@ public class CrashLog_Main extends AppCompatActivity {
     public void StartApplePlatformChooser(View view) {
         final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
         // Use bounce interpolator with amplitude 0.2 and frequency 20
-        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 200);
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(1, 2000);
         myAnim.setInterpolator(interpolator);
         appleButton.startAnimation(myAnim);
         Intent intent = new Intent(this, Apple_Platform_Choice.class);

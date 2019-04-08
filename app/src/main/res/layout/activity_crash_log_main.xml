@@ -58,76 +58,45 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/Android_linear"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:id="@+id/platform_linear"
+        android:layout_width="340dp"
+        android:layout_height="389dp"
         android:layout_below="@+id/ddm_logo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="24dp"
         android:elevation="10dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/android_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/transparent"
             android:clickable="true"
+            android:elevation="20dp"
             android:onClick="StartAndroidPlatformChooser"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/androidlogo" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_below="@+id/ddm_logo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lets_get_started"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:paddingStart="0dp"
-            android:text="Lets Get Started"
-            android:textAlignment="viewStart"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_below="@+id/ddm_logo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
-        android:paddingStart="0dp"
-        android:paddingEnd="0dp">
-
-        <TextView
-            android:id="@+id/whichplatform_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/apple_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Which platform are you going to be adding bugs to today?"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:elevation="20dp"
+            android:onClick="StartApplePlatformChooser"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/apple" />
     </LinearLayout>
 
     <ImageView
@@ -148,53 +117,27 @@
         app:srcCompat="@drawable/ddmlogo2" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="550dp"
-        android:layout_marginEnd="24dp"
-        android:elevation="10dp"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/apple_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/transparent"
-            android:clickable="true"
-            android:onClick="StartApplePlatformChooser"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/apple" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_below="@+id/Android_linear"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_above="@+id/platform_linear"
+        android:layout_below="@+id/ddm_logo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="-50dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/OR"
+            android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="OR"
-            android:textColor="@color/colorActionBar"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="Please choose below which platform you wish to track a crash for, press one to continue."
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
 </RelativeLayout>

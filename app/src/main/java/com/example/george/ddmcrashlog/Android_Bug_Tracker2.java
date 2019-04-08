@@ -66,11 +66,11 @@ public class Android_Bug_Tracker2 extends AppCompatActivity {
         anim.setDuration(700);
 
         // Start animating the image
-        final ImageView splash = findViewById(R.id.green_tick);
-        splash.startAnimation(anim);
+        final ImageView green_tick = findViewById(R.id.green_tick);
+        green_tick.startAnimation(anim);
 
         // Later.. stop the animation
-        // splash.setAnimation(null);
+        // green_tick.setAnimation(null);
 
         if (mEditBottomSheetDialog == null) {
             mEditBottomSheetDialog = new Dialog(this, R.style.MaterialDialogSheet);
