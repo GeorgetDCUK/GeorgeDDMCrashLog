@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/back_arrow"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="0"
@@ -44,7 +44,7 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/log_out"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="0"

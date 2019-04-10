@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 public class CrashLog_Splash extends AppCompatActivity {
 
     @Override
@@ -24,6 +27,19 @@ public class CrashLog_Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crash_log_splash);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+       // overridePendingTransition(android.R.anim.bounce_interpolator, android.R.anim.bounce_interpolator);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
+                AnimationType.RubberBand , 1000 , 0 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.textView5) ,
+                AnimationType.RubberBand , 1000 , 0 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.continue_button) ,
+                AnimationType.RubberBand , 1000 , 0 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.info_button) ,
+                AnimationType.RubberBand , 1000 , 0 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.swipe_up_text) ,
+                AnimationType.RubberBand , 1000 , 0 , true );
+
 
         // Use onswipe touch listener to allow user to swipe up from the bottom to get the onboarding screen
         // Starts activity of onboarding screen

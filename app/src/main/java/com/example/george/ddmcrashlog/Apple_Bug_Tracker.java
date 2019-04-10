@@ -1,5 +1,7 @@
 package com.example.george.ddmcrashlog;
 
+import android.app.Application;
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,12 +12,23 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 public class Apple_Bug_Tracker extends AppCompatActivity {
+
+    private static final String DATABASE_NAME = "crash_log";
+    private  DatabaseClass myDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apple_bug_tracker);
+
+//
+//        myDatabase = Room.databaseBuilder(getApplicationContext(), DatabaseClass.class,
+//                DATABASE_NAME).fallbackToDestructiveMigration().build();
+//
 
         // Making tool bar/status bar disappear so i can put in custom one of my own
         // Detecting the sdk version allows to remove status bar
@@ -25,6 +38,13 @@ public class Apple_Bug_Tracker extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.crash_id) ,
+                AnimationType.ZoomIn , 400 , 100 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.location_field) ,
+                AnimationType.ZoomIn , 400 , 200 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.description_field) ,
+                AnimationType.ZoomIn , 400 , 300 , true );
     }
 
     // Go back to Main Screen

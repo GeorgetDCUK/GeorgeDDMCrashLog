@@ -8,12 +8,26 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 public class Android_Platform_Choice extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_platform_choice);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.lcp_linear) ,
+                AnimationType.Pulse , 1000 , 100 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.hypo_linear) ,
+                AnimationType.Pulse , 1000 , 200 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.gro_linear) ,
+                AnimationType.Pulse , 1000 , 300 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.back_arrow) ,
+//                AnimationType.RotateIn , 1000 , 300 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.log_out) ,
+//                AnimationType.RotateIn , 1000 , 300 , true );
 
         // Making tool bar/status bar disappear so i can put in custom one of my own
         // Detecting the sdk version allows to remove status bar
@@ -34,7 +48,7 @@ public class Android_Platform_Choice extends AppCompatActivity {
     public void BackToMain(View view) {
         Intent intent = new Intent(this, CrashLog_Main.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        overridePendingTransition(R.anim.up_in, R.anim.up_out);
     }
 
     public void LogOut(View view) {

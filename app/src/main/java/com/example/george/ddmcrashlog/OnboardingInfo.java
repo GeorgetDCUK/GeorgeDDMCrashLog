@@ -10,6 +10,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.CycleInterpolator;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
 
 
 public class OnboardingInfo extends AppCompatActivity {
@@ -25,29 +29,45 @@ public class OnboardingInfo extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
         // On create method to set layout view to onboarding screen
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding_info);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
+                AnimationType.RollIn , 800 , -10 , false );
+        StartSmartAnimation.startAnimation( findViewById(R.id.onboarding_text) ,
+                AnimationType.RollIn , 800 , -10 , false );
+        StartSmartAnimation.startAnimation( findViewById(R.id.lcplogo) ,
+                AnimationType.RollIn , 800 , -10 , false );
+        StartSmartAnimation.startAnimation( findViewById(R.id.grologo) ,
+                AnimationType.RollIn , 800 , -10 , false );
+        StartSmartAnimation.startAnimation( findViewById(R.id.hypologo) ,
+                AnimationType.RollIn , 800 , -10 , false );
+        StartSmartAnimation.startAnimation( findViewById(R.id.samsungimage1) ,
+                AnimationType.RollIn , 800 , -10 , false );
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
-        // Declare backgrounds being used (ImageViews)
-        final ImageView backgroundOne = findViewById(R.id.background_one);
-        final ImageView backgroundTwo = findViewById(R.id.background_two);
 
-        final ValueAnimator animator = ValueAnimator.ofFloat(0.0f, 1.0f); // Float points to start and end
-        animator.setRepeatCount(0); // Repeat count to 0, set it inside of interpolator
-        animator.setInterpolator(new CycleInterpolator(1)); // cyclic interpolator type, set amount of times to 1
-        animator.setDuration(4000L); // Duration long value
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                final float progress = (float) animation.getAnimatedValue();
-                final float height = backgroundOne.getHeight(); // attain height of background to then use this to attach my animation
-                final float translationY = height * progress;
-                backgroundOne.setTranslationY(translationY); // Sets it to vertical
-                backgroundTwo.setTranslationY(translationY - height);
-            }
-        });
-        animator.start(); // Starts animation when layout is created -> activity start will prompt it
+//        // Declare backgrounds being used (ImageViews)
+//        final ImageView backgroundOne = findViewById(R.id.background_one);
+//        final ImageView backgroundTwo = findViewById(R.id.background_two);
+//
+//        final ValueAnimator animator = ValueAnimator.ofFloat(0.0f, 1.0f); // Float points to start and end
+//        animator.setRepeatCount(0); // Repeat count to 0, set it inside of interpolator
+//        animator.setInterpolator(new CycleInterpolator(1)); // cyclic interpolator type, set amount of times to 1
+//        animator.setDuration(4000L); // Duration long value
+//        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(ValueAnimator animation) {
+//                final float progress = (float) animation.getAnimatedValue();
+//                final float height = backgroundOne.getHeight(); // attain height of background to then use this to attach my animation
+//                final float translationY = height * progress;
+//                backgroundOne.setTranslationY(translationY); // Sets it to vertical
+//                backgroundTwo.setTranslationY(translationY - height);
+//            }
+//        });
+//        animator.start(); // Starts animation when layout is created -> activity start will prompt it
 
         // User can swipe screen down to go back to splash
         // Will start splash screen activity

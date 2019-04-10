@@ -13,7 +13,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 import java.util.Timer;
+import java.util.concurrent.DelayQueue;
 
 public class CrashLog_Main extends AppCompatActivity {
 
@@ -35,6 +39,16 @@ public class CrashLog_Main extends AppCompatActivity {
 
         androidButton = findViewById(R.id.android_button);
         appleButton = findViewById(R.id.apple_button);
+
+//        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
+//                AnimationType.ShakeBand , 2000 , 0 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.android_button) ,
+                AnimationType.RollIn , 1000 , 20 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.apple_button) ,
+                AnimationType.RollIn , 1000 , 30 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.textView11) ,
+//                AnimationType.BounceIn , 1000 , 10 , true );
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
@@ -47,7 +61,7 @@ public class CrashLog_Main extends AppCompatActivity {
 
         Intent intent = new Intent(this, Android_Platform_Choice.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.right_in, R.anim.right_out);
+        overridePendingTransition(R.anim.down_in, R.anim.down_out);
     }
     // Starts apple app platform chooser
     public void StartApplePlatformChooser(View view) {
@@ -56,15 +70,15 @@ public class CrashLog_Main extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
         appleButton.startAnimation(myAnim);
 
+
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 //            ObjectAnimator animator = ObjectAnimator.ofFloat(view, "translationX", 3000f);
 //            animator.setDuration(400);
 //            animator.start();
 //        }
-
         Intent intent = new Intent(this, Apple_Platform_Choice.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.right_in, R.anim.right_out);
+        overridePendingTransition(R.anim.down_in, R.anim.down_out);
     }
     // Log user out functionality
     public void LogOut(View view) {

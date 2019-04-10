@@ -10,6 +10,9 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 public class  Android_Bug_Tracker extends AppCompatActivity {
 
     @Override
@@ -27,6 +30,14 @@ public class  Android_Bug_Tracker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_bug_tracker);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.crash_id) ,
+                AnimationType.ZoomIn , 400 , 100 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.location_field) ,
+                AnimationType.ZoomIn , 400 , 200 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.description_field) ,
+                AnimationType.ZoomIn , 400 , 300 , true );
+
     }
     // Starts next activity Android_Bug_Tracker2
     public void BugTrackerScreen2(View view) {

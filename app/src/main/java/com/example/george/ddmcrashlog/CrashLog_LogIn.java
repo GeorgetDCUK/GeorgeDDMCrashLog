@@ -14,6 +14,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 public class CrashLog_LogIn extends AppCompatActivity {
 
     @Override
@@ -30,6 +33,21 @@ public class CrashLog_LogIn extends AppCompatActivity {
         }
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
+                AnimationType.Pulse , 1000 , 100 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.welcome) ,
+                AnimationType.Pulse , 1000 , 200 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.email_address_label) ,
+                AnimationType.Pulse , 1000 , 300 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.email_field) ,
+                AnimationType.Pulse , 1000 , 400 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.password_label) ,
+                AnimationType.Pulse , 1000 , 500 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.password_field) ,
+                AnimationType.Pulse , 1000 , 600 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.sign_in) ,
+                AnimationType.Pulse , 1000 , 1000 , true );
     }
 
     // Detect the edit text fields to validate inputs

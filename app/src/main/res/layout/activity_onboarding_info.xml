@@ -29,41 +29,6 @@
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Made with "
-            android:textColor="@android:color/white" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="91dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:tint="@android:color/white"
-            app:srcCompat="@drawable/hearticongradient" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayout12"
         android:layout_width="match_parent"
         android:layout_height="99dp"
@@ -75,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout17">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/lcplogo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -83,7 +48,7 @@
             app:srcCompat="@drawable/lcplogo" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/grologo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -93,7 +58,7 @@
             app:srcCompat="@drawable/grologo" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/hypologo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -139,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/onboarding_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -152,17 +117,18 @@
     <LinearLayout
         android:id="@+id/samsung_image_layout"
         android:layout_width="0dp"
-        android:layout_height="265dp"
+        android:layout_height="395dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:layout_weight="1"
-        android:background="@drawable/grobackgroundwithwhiteborder"
         android:elevation="10dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
 
         <ImageView
             android:id="@+id/samsungimage1"

@@ -16,6 +16,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 import java.util.Objects;
 
 public class Apple_Bug_Tracker2 extends AppCompatActivity {
@@ -36,6 +39,17 @@ public class Apple_Bug_Tracker2 extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.device_layout) ,
+                AnimationType.Pulse , 400 , 100 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.app_version_layout) ,
+                AnimationType.Pulse , 400 , 200 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.os_layout) ,
+                AnimationType.Pulse , 400 , 300 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.reproduce_layout) ,
+                AnimationType.Pulse , 400 , 400 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.resolve_layout) ,
+                AnimationType.Pulse , 400 , 500 , true );
     }
 
     // Takes user back to first apple bug tracker screen

@@ -20,6 +20,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.podcopic.animationlib.library.AnimationType;
+import com.podcopic.animationlib.library.StartSmartAnimation;
+
 import java.util.Objects;
 
 public class Android_Bug_Tracker2 extends AppCompatActivity {
@@ -41,6 +44,18 @@ public class Android_Bug_Tracker2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_bug_tracker2);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.device_layout) ,
+                AnimationType.Pulse , 400 , 100 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.app_version_layout) ,
+                AnimationType.Pulse , 400 , 200 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.os_layout) ,
+                AnimationType.Pulse , 400 , 300 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.reproduce_layout) ,
+                AnimationType.Pulse , 400 , 400 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.resolve_layout) ,
+                AnimationType.Pulse , 400 , 500 , true );
+
     }
 
     // Go back to Android bug tracker screen 1
