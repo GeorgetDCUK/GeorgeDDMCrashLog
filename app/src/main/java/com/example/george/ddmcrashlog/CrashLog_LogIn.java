@@ -47,7 +47,7 @@ public class CrashLog_LogIn extends AppCompatActivity {
         StartSmartAnimation.startAnimation( findViewById(R.id.password_field) ,
                 AnimationType.Pulse , 1000 , 600 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.sign_in) ,
-                AnimationType.Pulse , 1000 , 1000 , true );
+                AnimationType.Tada , 1000 , 1000 , true );
     }
 
     // Detect the edit text fields to validate inputs
