@@ -43,9 +43,9 @@ public class CrashLog_Main extends AppCompatActivity {
 //        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
 //                AnimationType.ShakeBand , 2000 , 0 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.android_button) ,
-                AnimationType.RollIn , 1000 , 20 , true );
+                AnimationType.Pulse , 1000 , 100 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.apple_button) ,
-                AnimationType.RollIn , 1000 , 30 , true );
+                AnimationType.Pulse , 1000 , 300 , true );
 //        StartSmartAnimation.startAnimation( findViewById(R.id.textView11) ,
 //                AnimationType.BounceIn , 1000 , 10 , true );
 

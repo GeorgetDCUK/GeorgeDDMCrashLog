@@ -34,4 +34,6 @@ dependencies {
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
     implementation 'com.github.ratty3697:android-smart-animation-library:1.6'
+    implementation 'com.github.glomadrian:Grav:1.1'
+    implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.3'
 }

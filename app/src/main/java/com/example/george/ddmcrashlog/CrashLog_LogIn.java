@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.podcopic.animationlib.library.AnimationType;
 import com.podcopic.animationlib.library.StartSmartAnimation;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class CrashLog_LogIn extends AppCompatActivity {
 
@@ -34,18 +35,18 @@ public class CrashLog_LogIn extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
-        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
-                AnimationType.Pulse , 1000 , 100 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.welcome) ,
-                AnimationType.Pulse , 1000 , 200 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.email_address_label) ,
-                AnimationType.Pulse , 1000 , 300 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.email_field) ,
-                AnimationType.Pulse , 1000 , 400 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.password_label) ,
-                AnimationType.Pulse , 1000 , 500 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.password_field) ,
-                AnimationType.Pulse , 1000 , 600 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
+//                AnimationType.Pulse , 1000 , 100 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.welcome) ,
+//                AnimationType.Pulse , 1000 , 200 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.email_address_label) ,
+//                AnimationType.Pulse , 1000 , 300 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.email_field) ,
+//                AnimationType.Pulse , 1000 , 400 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.password_label) ,
+//                AnimationType.Pulse , 1000 , 500 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.password_field) ,
+//                AnimationType.Pulse , 1000 , 600 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.sign_in) ,
                 AnimationType.RubberBand , 1000 , 2000 , true );
     }
@@ -54,42 +55,46 @@ public class CrashLog_LogIn extends AppCompatActivity {
     // Checking user credentials entered are valid to proceed in app
     // If one or the other are empty -> Toast and blocked from proceeding
     // Add custom anim transition to go to next screen
-    public void LogInValidation(View view) {
+    public void LogInValidation(View view) throws InterruptedException {
         EditText email = findViewById(R.id.email_field);
         EditText password = findViewById(R.id.password_field);
 
         if (email == null || email.getText().toString().isEmpty() ||
                 password.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please fill in your email and password to log in",
-                    Toast.LENGTH_SHORT).show();
-            email.setError("Please fill in your email");
-            password.setError("Please fill in your password");
+            FancyToast.makeText(this,"Login Failed! Please try again",
+                    FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
+//            email.setError("Please fill in your email");
+//            password.setError("Please fill in your password");
             email.setBackgroundResource(R.drawable.errorbackground);
             password.setBackgroundResource(R.drawable.errorbackground);
         } else if (!(email.getText().toString().matches("georget@ddm.health") &&
                 password.getText().toString().matches("George"))) {
-            Toast.makeText(this, "Credentials are invalid, please try again",
-                    Toast.LENGTH_SHORT).show();
-            email.setError("Email is Incorrect");
-            password.setError("Password is Incorrect");
+            FancyToast.makeText(this,"Login Failed! Please try again",
+                    FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
+//            email.setError("Email is Incorrect");
+//            password.setError("Password is Incorrect");
             email.setBackgroundResource(R.drawable.errorbackground);
             password.setBackgroundResource(R.drawable.errorbackground);
         } else {
             email.setBackgroundResource(R.drawable.successbackground);
             password.setBackgroundResource(R.drawable.successbackground);
-            email.setError(null);
-            password.setError(null);
+//            email.setError(null);
+//            password.setError(null);
             Intent intent = new Intent(this, CrashLog_Main.class);
             startActivity(intent);
             Button button = findViewById(R.id.sign_in);
             button.setText("LOADING...");
             ProgressBar progressBar = findViewById(R.id.progressbar);
             progressBar.setVisibility(View.VISIBLE);
+            FancyToast.makeText(this,"Success!",FancyToast.LENGTH_LONG,
+                    FancyToast.SUCCESS,true).show();
             overridePendingTransition(R.anim.right_in, R.anim.right_out);
         }
     }
 
     public void ShortCut(View view) {
+        FancyToast.makeText(this,"Success!",FancyToast.LENGTH_LONG,
+                FancyToast.SUCCESS,true).show();
         Intent intent = new Intent(this, CrashLog_Main.class);
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
