@@ -31,12 +31,8 @@ public class  Android_Bug_Tracker extends AppCompatActivity {
         setContentView(R.layout.activity_android_bug_tracker);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
-        StartSmartAnimation.startAnimation( findViewById(R.id.crash_id) ,
-                AnimationType.Pulse , 400 , 100 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.location_field) ,
-                AnimationType.Pulse , 400 , 200 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.description_field) ,
-                AnimationType.Pulse , 400 , 300 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.continue_button) ,
+                AnimationType.Tada , 400 , 300 , true );
 
     }
     // Starts next activity Android_Bug_Tracker2
