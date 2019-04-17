@@ -46,9 +46,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:onClick="ExitToMain"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="@drawable/white_button_background"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="ExitToMain"
+            android:theme="@style/AppTheme2"
             android:text="EXIT TO MAIN MENU"
             android:textAlignment="center" />
 
