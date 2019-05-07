@@ -19,7 +19,7 @@
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
         <item name="android:windowContentTransitions">true</item>
-        <item name="android:colorControlHighlight">@color/colorGroPink</item>
+        <item name="android:colorControlHighlight">@color/colorPrimaryDark</item>
     </style>
 e
     <style name="MaterialDialogSheet" parent="@android:style/Theme.Dialog">

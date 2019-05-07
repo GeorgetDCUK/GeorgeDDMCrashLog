@@ -33,12 +33,12 @@ public class Apple_Platform_Choice extends AppCompatActivity {
 //                AnimationType.RollIn , 1000 , 0 , true );
 //        StartSmartAnimation.startAnimation( findViewById(R.id.apple_image) ,
 //                AnimationType.RollIn , 1000 , 0 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.lcp_linear) ,
-                AnimationType.Pulse , 1000 , 100 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.hypo_linear) ,
-                AnimationType.Pulse , 1000 , 200 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.gro_linear) ,
-                AnimationType.Pulse , 1000 , 300 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.lcp_linear) ,
+//                AnimationType.Pulse , 1000 , 100 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.hypo_linear) ,
+//                AnimationType.Pulse , 1000 , 200 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.gro_linear) ,
+//                AnimationType.Pulse , 1000 , 300 , true );
 //        StartSmartAnimation.startAnimation( findViewById(R.id.back_arrow) ,
 //                AnimationType.RotateIn , 1000 , 300 , true );
 //        StartSmartAnimation.startAnimation( findViewById(R.id.log_out) ,

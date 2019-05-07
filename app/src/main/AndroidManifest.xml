@@ -3,9 +3,9 @@
     package="com.example.george.ddmcrashlog">
     <application
         android:allowBackup="true"
-        android:icon="@drawable/appicon"
+        android:icon="@drawable/bug_icon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/appicon"
+        android:roundIcon="@drawable/bug_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity

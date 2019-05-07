@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 
 import com.podcopic.animationlib.library.AnimationType;
 import com.podcopic.animationlib.library.StartSmartAnimation;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.Timer;
 import java.util.concurrent.DelayQueue;
@@ -41,11 +42,11 @@ public class CrashLog_Main extends AppCompatActivity {
         appleButton = findViewById(R.id.apple_button);
 
 //        StartSmartAnimation.startAnimation( findViewById(R.id.ddm_logo) ,
-//                AnimationType.ShakeBand , 2000 , 0 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.android_button) ,
-                AnimationType.Pulse , 1000 , 100 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.apple_button) ,
-                AnimationType.Pulse , 1000 , 300 , true );
+////                AnimationType.ShakeBand , 2000 , 0 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.android_button) ,
+//                AnimationType.Pulse , 1000 , 100 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.apple_button) ,
+//                AnimationType.Pulse , 1000 , 300 , true );
 //        StartSmartAnimation.startAnimation( findViewById(R.id.textView11) ,
 //                AnimationType.BounceIn , 1000 , 10 , true );
 

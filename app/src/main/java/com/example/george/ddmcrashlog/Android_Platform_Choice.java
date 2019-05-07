@@ -18,12 +18,12 @@ public class Android_Platform_Choice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_platform_choice);
 
-        StartSmartAnimation.startAnimation( findViewById(R.id.lcp_linear) ,
-                AnimationType.Pulse , 1000 , 100 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.hypo_linear) ,
-                AnimationType.Pulse , 1000 , 200 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.gro_linear) ,
-                AnimationType.Pulse , 1000 , 300 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.lcp_linear) ,
+//                AnimationType.Pulse , 1000 , 100 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.hypo_linear) ,
+//                AnimationType.Pulse , 1000 , 200 , true );
+//        StartSmartAnimation.startAnimation( findViewById(R.id.gro_linear) ,
+//                AnimationType.Pulse , 1000 , 300 , true );
 //        StartSmartAnimation.startAnimation( findViewById(R.id.back_arrow) ,
 //                AnimationType.RotateIn , 1000 , 300 , true );
 //        StartSmartAnimation.startAnimation( findViewById(R.id.log_out) ,

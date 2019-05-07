@@ -62,7 +62,7 @@ public class CrashLog_LogIn extends AppCompatActivity {
         if (email == null || email.getText().toString().isEmpty() ||
                 password.getText().toString().isEmpty()) {
             FancyToast.makeText(this,"Login Failed! Please try again",
-                    FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
+                    FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
 //            email.setError("Please fill in your email");
 //            password.setError("Please fill in your password");
             email.setBackgroundResource(R.drawable.errorbackground);
@@ -70,7 +70,7 @@ public class CrashLog_LogIn extends AppCompatActivity {
         } else if (!(email.getText().toString().matches("georget@ddm.health") &&
                 password.getText().toString().matches("George"))) {
             FancyToast.makeText(this,"Login Failed! Please try again",
-                    FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
+                    FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
 //            email.setError("Email is Incorrect");
 //            password.setError("Password is Incorrect");
             email.setBackgroundResource(R.drawable.errorbackground);
@@ -87,14 +87,14 @@ public class CrashLog_LogIn extends AppCompatActivity {
             ProgressBar progressBar = findViewById(R.id.progressbar);
             progressBar.setVisibility(View.VISIBLE);
             FancyToast.makeText(this,"Success!",FancyToast.LENGTH_LONG,
-                    FancyToast.SUCCESS,true).show();
+                    FancyToast.SUCCESS,false).show();
             overridePendingTransition(R.anim.right_in, R.anim.right_out);
         }
     }
 
     public void ShortCut(View view) {
         FancyToast.makeText(this,"Success!",FancyToast.LENGTH_LONG,
-                FancyToast.SUCCESS,true).show();
+                FancyToast.SUCCESS,false).show();
         Intent intent = new Intent(this, CrashLog_Main.class);
         startActivity(intent);
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
