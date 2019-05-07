@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.podcopic.animationlib.library.AnimationType;
 import com.podcopic.animationlib.library.StartSmartAnimation;
 
+
 public class CrashLog_Splash extends AppCompatActivity {
 
     @Override
@@ -42,7 +43,6 @@ public class CrashLog_Splash extends AppCompatActivity {
                 AnimationType.RubberBand , 1000 , 0 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.swipe_up_text) ,
                 AnimationType.RubberBand , 1000 , 0 , true );
-
 
         // Use onswipe touch listener to allow user to swipe up from the bottom to get the onboarding screen
         // Starts activity of onboarding screen
