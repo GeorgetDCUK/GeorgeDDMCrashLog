@@ -86,12 +86,14 @@
         app:srcCompat="@drawable/apple_image" />
 
     <LinearLayout
+        android:id="@+id/text_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/white_curved_background"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,13 +109,14 @@
             android:padding="10dp"
             android:text="Select which platform you would like to track for to proceed!"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
             android:visibility="visible" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -142,6 +145,29 @@
             android:visibility="invisible"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="622dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/exit_button"
+            android:layout_width="126dp"
+            android:layout_height="30dp"
+            android:layout_weight="0"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/gro_background_button"
+            android:text="EXIT"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

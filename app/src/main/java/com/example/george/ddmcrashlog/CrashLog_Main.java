@@ -39,16 +39,23 @@ public class CrashLog_Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crash_log_main);
 
-        StartSmartAnimation.startAnimation( findViewById(R.id.text_field) ,
+        Button button = findViewById(R.id.exit_button);
+        button.setVisibility(View.INVISIBLE);
+
+        StartSmartAnimation.startAnimation( findViewById(R.id.text_layout) ,
                 AnimationType.Pulse , 400 , 0 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.apple_button) ,
-                AnimationType.Pulse , 400 , 100 , true );
-        StartSmartAnimation.startAnimation( findViewById(R.id.android_button) ,
                 AnimationType.Pulse , 400 , 300 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.android_button) ,
+                AnimationType.Pulse , 400 , 600 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.grad_divider) ,
-                AnimationType.Pulse , 400 , 400 , true );
+                AnimationType.Pulse , 400 , 900 , true );
         StartSmartAnimation.startAnimation( findViewById(R.id.grad_circle) ,
-                AnimationType.Pulse , 400 , 500 , true );
+                AnimationType.Pulse , 400 , 1200 , true );
+        StartSmartAnimation.startAnimation( findViewById(R.id.exit_button) ,
+                AnimationType.Pulse , 400 , 5000 , true );
+
+        button.setVisibility(View.VISIBLE);
 
 //        ImageView gradCircle = findViewById(R.id.grad_circle);
 //        gradCircle.startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate));
